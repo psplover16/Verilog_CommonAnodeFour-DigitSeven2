@@ -1,0 +1,37 @@
+|tt
+clk => frequency[0].CLK
+clk => frequency[1].CLK
+clk => frequency[2].CLK
+clk => frequency[3].CLK
+clk => frequency[4].CLK
+clk => frequency[5].CLK
+clk => frequency[6].CLK
+clk => frequency[7].CLK
+clk => frequency[8].CLK
+clk => frequency[9].CLK
+clk => frequency[10].CLK
+clk => frequency[11].CLK
+clk => frequency[12].CLK
+clk => frequency[13].CLK
+clk => frequency[14].CLK
+clk => frequency[15].CLK
+clk => frequency[16].CLK
+clk => frequency[17].CLK
+clk => frequency[18].CLK
+clk => frequency[19].CLK
+clk => frequency[20].CLK
+clk => frequency[21].CLK
+showDigit_input => ~NO_FANOUT~
+showNum_input => ~NO_FANOUT~
+showDigit_output[0] <= showDigit_output[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+showDigit_output[1] <= showDigit_output[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+showDigit_output[2] <= showDigit_output[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+showDigit_output[3] <= showDigit_output[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+showNum_output[0] <= showNum_output[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+showNum_output[1] <= showNum_output[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+showNum_output[2] <= showNum_output[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+showNum_output[3] <= showNum_output[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+showNum_output[4] <= showNum_output[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+showNum_output[5] <= showNum_output[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
