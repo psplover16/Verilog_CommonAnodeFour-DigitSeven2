@@ -1,5 +1,5 @@
 Simulator report for tt
-Tue Apr 30 09:04:35 2024
+Wed May 01 18:19:18 2024
 Quartus II Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
 
 
@@ -45,9 +45,9 @@ applicable agreement for further details.
 +-----------------------------+-----------------+
 ; Simulation Start Time       ; 0 ps            ;
 ; Simulation End Time         ; 10.0 s          ;
-; Simulation Netlist Size     ; 23 nodes        ;
-; Simulation Coverage         ;      57.89 %    ;
-; Total Number of Transitions ; 171             ;
+; Simulation Netlist Size     ; 45 nodes        ;
+; Simulation Coverage         ;      12.50 %    ;
+; Total Number of Transitions ; 77              ;
 ; Simulation Breakpoints      ; 0               ;
 ; Family                      ; MAX3000A        ;
 ; Device                      ; EPM3064ALC44-10 ;
@@ -77,7 +77,7 @@ applicable agreement for further details.
 ; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
 ; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
 ; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
-; Overwrite Waveform Inputs With Simulation Outputs                                          ; On         ;               ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
 ; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
 +--------------------------------------------------------------------------------------------+------------+---------------+
 
@@ -94,68 +94,115 @@ Please use Quartus II to view the waveform report data.
 +-----------------------------------------------------+--------------+
 ; Type                                                ; Value        ;
 +-----------------------------------------------------+--------------+
-; Total coverage as a percentage                      ;      57.89 % ;
-; Total nodes checked                                 ; 23           ;
-; Total output ports checked                          ; 19           ;
-; Total output ports with complete 1/0-value coverage ; 11           ;
-; Total output ports with no 1/0-value coverage       ; 8            ;
-; Total output ports with no 1-value coverage         ; 8            ;
-; Total output ports with no 0-value coverage         ; 8            ;
+; Total coverage as a percentage                      ;      12.50 % ;
+; Total nodes checked                                 ; 45           ;
+; Total output ports checked                          ; 40           ;
+; Total output ports with complete 1/0-value coverage ; 5            ;
+; Total output ports with no 1/0-value coverage       ; 34           ;
+; Total output ports with no 1-value coverage         ; 34           ;
+; Total output ports with no 0-value coverage         ; 35           ;
 +-----------------------------------------------------+--------------+
 
 
 The following table displays output ports that toggle between 1 and 0 during simulation.
-+--------------------------------------------------------------------------------+
-; Complete 1/0-Value Coverage                                                    ;
-+------------------------------+------------------------------+------------------+
-; Node Name                    ; Output Port Name             ; Output Port Type ;
-+------------------------------+------------------------------+------------------+
-; |tt|showDigit_output[0]~reg0 ; |tt|showDigit_output[0]~reg0 ; dataout          ;
-; |tt|showDigit_output[1]~reg0 ; |tt|showDigit_output[1]~reg0 ; dataout          ;
-; |tt|showNum_output[3]~reg0   ; |tt|showNum_output[3]~reg0   ; dataout          ;
-; |tt|showNum_output[0]~reg0   ; |tt|showNum_output[0]~reg0   ; dataout          ;
-; |tt|clk                      ; |tt|clk~corein               ; dataout          ;
-; |tt|showDigit_output[0]      ; |tt|showDigit_output[0]      ; padio            ;
-; |tt|showNum_output[1]        ; |tt|showNum_output[1]        ; padio            ;
-; |tt|showDigit_output[1]      ; |tt|showDigit_output[1]      ; padio            ;
-; |tt|showNum_output[2]        ; |tt|showNum_output[2]        ; padio            ;
-; |tt|showNum_output[3]        ; |tt|showNum_output[3]        ; padio            ;
-; |tt|showNum_output[0]        ; |tt|showNum_output[0]        ; padio            ;
-+------------------------------+------------------------------+------------------+
++------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                          ;
++-----------------------------------------+-----------------------------------------+------------------+
+; Node Name                               ; Output Port Name                        ; Output Port Type ;
++-----------------------------------------+-----------------------------------------+------------------+
+; |tt|lpm_counter:frequency_rtl_0|dffs[0] ; |tt|lpm_counter:frequency_rtl_0|dffs[0] ; dataout          ;
+; |tt|lpm_counter:frequency_rtl_0|dffs[1] ; |tt|lpm_counter:frequency_rtl_0|dffs[1] ; dataout          ;
+; |tt|lpm_counter:frequency_rtl_0|dffs[2] ; |tt|lpm_counter:frequency_rtl_0|dffs[2] ; dataout          ;
+; |tt|lpm_counter:frequency_rtl_0|dffs[3] ; |tt|lpm_counter:frequency_rtl_0|dffs[3] ; dataout          ;
+; |tt|clk                                 ; |tt|clk~corein                          ; dataout          ;
++-----------------------------------------+-----------------------------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 1 during simulation.
-+--------------------------------------------------------------------------------+
-; Missing 1-Value Coverage                                                       ;
-+------------------------------+------------------------------+------------------+
-; Node Name                    ; Output Port Name             ; Output Port Type ;
-+------------------------------+------------------------------+------------------+
-; |tt|showDigit_output[3]~reg0 ; |tt|showDigit_output[3]~reg0 ; dataout          ;
-; |tt|showDigit_output[2]~reg0 ; |tt|showDigit_output[2]~reg0 ; dataout          ;
-; |tt|~GND~0                   ; |tt|~GND~0                   ; dataout          ;
-; |tt|~GND~1                   ; |tt|~GND~1                   ; dataout          ;
-; |tt|showNum_output[4]        ; |tt|showNum_output[4]        ; padio            ;
-; |tt|showNum_output[5]        ; |tt|showNum_output[5]        ; padio            ;
-; |tt|showDigit_output[3]      ; |tt|showDigit_output[3]      ; padio            ;
-; |tt|showDigit_output[2]      ; |tt|showDigit_output[2]      ; padio            ;
-+------------------------------+------------------------------+------------------+
++--------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                               ;
++------------------------------------------+------------------------------------------+------------------+
+; Node Name                                ; Output Port Name                         ; Output Port Type ;
++------------------------------------------+------------------------------------------+------------------+
+; |tt|lpm_counter:frequency_rtl_0|dffs[5]  ; |tt|lpm_counter:frequency_rtl_0|dffs[5]  ; dataout          ;
+; |tt|lpm_counter:frequency_rtl_0|dffs[6]  ; |tt|lpm_counter:frequency_rtl_0|dffs[6]  ; dataout          ;
+; |tt|lpm_counter:frequency_rtl_0|dffs[7]  ; |tt|lpm_counter:frequency_rtl_0|dffs[7]  ; dataout          ;
+; |tt|lpm_counter:frequency_rtl_0|dffs[8]  ; |tt|lpm_counter:frequency_rtl_0|dffs[8]  ; dataout          ;
+; |tt|lpm_counter:frequency_rtl_0|dffs[9]  ; |tt|lpm_counter:frequency_rtl_0|dffs[9]  ; dataout          ;
+; |tt|lpm_counter:frequency_rtl_0|dffs[10] ; |tt|lpm_counter:frequency_rtl_0|dffs[10] ; dataout          ;
+; |tt|lpm_counter:frequency_rtl_0|dffs[11] ; |tt|lpm_counter:frequency_rtl_0|dffs[11] ; dataout          ;
+; |tt|lpm_counter:frequency_rtl_0|dffs[12] ; |tt|lpm_counter:frequency_rtl_0|dffs[12] ; dataout          ;
+; |tt|lpm_counter:frequency_rtl_0|dffs[13] ; |tt|lpm_counter:frequency_rtl_0|dffs[13] ; dataout          ;
+; |tt|lpm_counter:frequency_rtl_0|dffs[14] ; |tt|lpm_counter:frequency_rtl_0|dffs[14] ; dataout          ;
+; |tt|lpm_counter:frequency_rtl_0|dffs[15] ; |tt|lpm_counter:frequency_rtl_0|dffs[15] ; dataout          ;
+; |tt|lpm_counter:frequency_rtl_0|dffs[16] ; |tt|lpm_counter:frequency_rtl_0|dffs[16] ; dataout          ;
+; |tt|lpm_counter:frequency_rtl_0|dffs[17] ; |tt|lpm_counter:frequency_rtl_0|dffs[17] ; dataout          ;
+; |tt|lpm_counter:frequency_rtl_0|dffs[18] ; |tt|lpm_counter:frequency_rtl_0|dffs[18] ; dataout          ;
+; |tt|lpm_counter:frequency_rtl_0|dffs[19] ; |tt|lpm_counter:frequency_rtl_0|dffs[19] ; dataout          ;
+; |tt|lpm_counter:frequency_rtl_0|dffs[20] ; |tt|lpm_counter:frequency_rtl_0|dffs[20] ; dataout          ;
+; |tt|lpm_counter:frequency_rtl_0|dffs[21] ; |tt|lpm_counter:frequency_rtl_0|dffs[21] ; dataout          ;
+; |tt|showDigit_output[2]~reg0             ; |tt|showDigit_output[2]~reg0             ; dataout          ;
+; |tt|showNum_output[3]~reg0               ; |tt|showNum_output[3]~reg0               ; dataout          ;
+; |tt|showDigit_output[3]~reg0             ; |tt|showDigit_output[3]~reg0             ; dataout          ;
+; |tt|showNum_output[0]~reg0               ; |tt|showNum_output[0]~reg0               ; dataout          ;
+; |tt|showDigit_output[0]~reg0             ; |tt|showDigit_output[0]~reg0             ; dataout          ;
+; |tt|~GND~0                               ; |tt|~GND~0                               ; dataout          ;
+; |tt|~GND~1                               ; |tt|~GND~1                               ; dataout          ;
+; |tt|showNum_output[4]                    ; |tt|showNum_output[4]                    ; padio            ;
+; |tt|showNum_output[5]                    ; |tt|showNum_output[5]                    ; padio            ;
+; |tt|showDigit_output[1]                  ; |tt|showDigit_output[1]                  ; padio            ;
+; |tt|showNum_output[1]                    ; |tt|showNum_output[1]                    ; padio            ;
+; |tt|showDigit_output[2]                  ; |tt|showDigit_output[2]                  ; padio            ;
+; |tt|showNum_output[2]                    ; |tt|showNum_output[2]                    ; padio            ;
+; |tt|showDigit_output[3]                  ; |tt|showDigit_output[3]                  ; padio            ;
+; |tt|showNum_output[3]                    ; |tt|showNum_output[3]                    ; padio            ;
+; |tt|showDigit_output[0]                  ; |tt|showDigit_output[0]                  ; padio            ;
+; |tt|showNum_output[0]                    ; |tt|showNum_output[0]                    ; padio            ;
++------------------------------------------+------------------------------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 0 during simulation.
-+--------------------------------------------------------------------------------+
-; Missing 0-Value Coverage                                                       ;
-+------------------------------+------------------------------+------------------+
-; Node Name                    ; Output Port Name             ; Output Port Type ;
-+------------------------------+------------------------------+------------------+
-; |tt|showDigit_output[3]~reg0 ; |tt|showDigit_output[3]~reg0 ; dataout          ;
-; |tt|showDigit_output[2]~reg0 ; |tt|showDigit_output[2]~reg0 ; dataout          ;
-; |tt|~GND~0                   ; |tt|~GND~0                   ; dataout          ;
-; |tt|~GND~1                   ; |tt|~GND~1                   ; dataout          ;
-; |tt|showNum_output[4]        ; |tt|showNum_output[4]        ; padio            ;
-; |tt|showNum_output[5]        ; |tt|showNum_output[5]        ; padio            ;
-; |tt|showDigit_output[3]      ; |tt|showDigit_output[3]      ; padio            ;
-; |tt|showDigit_output[2]      ; |tt|showDigit_output[2]      ; padio            ;
-+------------------------------+------------------------------+------------------+
++--------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                               ;
++------------------------------------------+------------------------------------------+------------------+
+; Node Name                                ; Output Port Name                         ; Output Port Type ;
++------------------------------------------+------------------------------------------+------------------+
+; |tt|lpm_counter:frequency_rtl_0|dffs[4]  ; |tt|lpm_counter:frequency_rtl_0|dffs[4]  ; dataout          ;
+; |tt|lpm_counter:frequency_rtl_0|dffs[5]  ; |tt|lpm_counter:frequency_rtl_0|dffs[5]  ; dataout          ;
+; |tt|lpm_counter:frequency_rtl_0|dffs[6]  ; |tt|lpm_counter:frequency_rtl_0|dffs[6]  ; dataout          ;
+; |tt|lpm_counter:frequency_rtl_0|dffs[7]  ; |tt|lpm_counter:frequency_rtl_0|dffs[7]  ; dataout          ;
+; |tt|lpm_counter:frequency_rtl_0|dffs[8]  ; |tt|lpm_counter:frequency_rtl_0|dffs[8]  ; dataout          ;
+; |tt|lpm_counter:frequency_rtl_0|dffs[9]  ; |tt|lpm_counter:frequency_rtl_0|dffs[9]  ; dataout          ;
+; |tt|lpm_counter:frequency_rtl_0|dffs[10] ; |tt|lpm_counter:frequency_rtl_0|dffs[10] ; dataout          ;
+; |tt|lpm_counter:frequency_rtl_0|dffs[11] ; |tt|lpm_counter:frequency_rtl_0|dffs[11] ; dataout          ;
+; |tt|lpm_counter:frequency_rtl_0|dffs[12] ; |tt|lpm_counter:frequency_rtl_0|dffs[12] ; dataout          ;
+; |tt|lpm_counter:frequency_rtl_0|dffs[13] ; |tt|lpm_counter:frequency_rtl_0|dffs[13] ; dataout          ;
+; |tt|lpm_counter:frequency_rtl_0|dffs[14] ; |tt|lpm_counter:frequency_rtl_0|dffs[14] ; dataout          ;
+; |tt|lpm_counter:frequency_rtl_0|dffs[15] ; |tt|lpm_counter:frequency_rtl_0|dffs[15] ; dataout          ;
+; |tt|lpm_counter:frequency_rtl_0|dffs[16] ; |tt|lpm_counter:frequency_rtl_0|dffs[16] ; dataout          ;
+; |tt|lpm_counter:frequency_rtl_0|dffs[17] ; |tt|lpm_counter:frequency_rtl_0|dffs[17] ; dataout          ;
+; |tt|lpm_counter:frequency_rtl_0|dffs[18] ; |tt|lpm_counter:frequency_rtl_0|dffs[18] ; dataout          ;
+; |tt|lpm_counter:frequency_rtl_0|dffs[19] ; |tt|lpm_counter:frequency_rtl_0|dffs[19] ; dataout          ;
+; |tt|lpm_counter:frequency_rtl_0|dffs[20] ; |tt|lpm_counter:frequency_rtl_0|dffs[20] ; dataout          ;
+; |tt|lpm_counter:frequency_rtl_0|dffs[21] ; |tt|lpm_counter:frequency_rtl_0|dffs[21] ; dataout          ;
+; |tt|showDigit_output[2]~reg0             ; |tt|showDigit_output[2]~reg0             ; dataout          ;
+; |tt|showNum_output[3]~reg0               ; |tt|showNum_output[3]~reg0               ; dataout          ;
+; |tt|showDigit_output[3]~reg0             ; |tt|showDigit_output[3]~reg0             ; dataout          ;
+; |tt|showNum_output[0]~reg0               ; |tt|showNum_output[0]~reg0               ; dataout          ;
+; |tt|showDigit_output[0]~reg0             ; |tt|showDigit_output[0]~reg0             ; dataout          ;
+; |tt|~GND~0                               ; |tt|~GND~0                               ; dataout          ;
+; |tt|~GND~1                               ; |tt|~GND~1                               ; dataout          ;
+; |tt|showNum_output[4]                    ; |tt|showNum_output[4]                    ; padio            ;
+; |tt|showNum_output[5]                    ; |tt|showNum_output[5]                    ; padio            ;
+; |tt|showDigit_output[1]                  ; |tt|showDigit_output[1]                  ; padio            ;
+; |tt|showNum_output[1]                    ; |tt|showNum_output[1]                    ; padio            ;
+; |tt|showDigit_output[2]                  ; |tt|showDigit_output[2]                  ; padio            ;
+; |tt|showNum_output[2]                    ; |tt|showNum_output[2]                    ; padio            ;
+; |tt|showDigit_output[3]                  ; |tt|showDigit_output[3]                  ; padio            ;
+; |tt|showNum_output[3]                    ; |tt|showNum_output[3]                    ; padio            ;
+; |tt|showDigit_output[0]                  ; |tt|showDigit_output[0]                  ; padio            ;
+; |tt|showNum_output[0]                    ; |tt|showNum_output[0]                    ; padio            ;
++------------------------------------------+------------------------------------------+------------------+
 
 
 +---------------------+
@@ -171,21 +218,18 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II Simulator
     Info: Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Apr 30 09:04:35 2024
+    Info: Processing started: Wed May 01 18:19:18 2024
 Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off tt -c tt
-Info: Using vector source file "C:/Users/Gary/Desktop/Vue/Verilog_CommonAnodeFour-DigitSeven2/tt.vwf"
-Info: Overwriting simulation input file with simulation results
-    Info: A backup of tt.vwf called tt.sim_ori.vwf has been created in the db folder
+Info: Using vector source file "C:/Vue/Verilog_CommonAnodeFour-DigitSeven2/tt.vwf"
 Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
 Info: Simulation partitioned into 1 sub-simulations
-Info: Simulation coverage is      57.89 %
-Info: Number of transitions in simulation is 171
-Info: Vector file tt.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Simulation coverage is      12.50 %
+Info: Number of transitions in simulation is 77
 Info: Quartus II Simulator was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 151 megabytes
-    Info: Processing ended: Tue Apr 30 09:04:35 2024
-    Info: Elapsed time: 00:00:00
+    Info: Peak virtual memory: 153 megabytes
+    Info: Processing ended: Wed May 01 18:19:19 2024
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:00
 
 

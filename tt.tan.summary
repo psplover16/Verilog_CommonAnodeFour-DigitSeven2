@@ -16,8 +16,8 @@ Type           : Clock Setup: 'clk'
 Slack          : N/A
 Required Time  : None
 Actual Time    : 99.01 MHz ( period = 10.100 ns )
-From           : lpm_counter:frequency_rtl_0|dffs[4]
-To             : lpm_counter:frequency_rtl_0|dffs[21]
+From           : showNum_output[2]~reg0
+To             : showNum_output[2]~reg0
 From Clock     : clk
 To Clock       : clk
 Failed Paths   : 0

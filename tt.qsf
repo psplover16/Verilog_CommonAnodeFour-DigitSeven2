@@ -49,14 +49,15 @@ set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name MAX7000_DEVICE_IO_STANDARD "3.3-V LVTTL"
 set_location_assignment PIN_43 -to clk
 set_global_assignment -name MISC_FILE "C:/Users/Gary/Desktop/Vue/Verilog_CommonAnodeFour-DigitSeven2/tt.dpf"
-set_location_assignment PIN_41 -to showDigit_output[3]
-set_location_assignment PIN_40 -to showDigit_output[2]
-set_location_assignment PIN_39 -to showDigit_output[1]
-set_location_assignment PIN_37 -to showDigit_output[0]
-set_location_assignment PIN_4 -to showNum_output[5]
-set_location_assignment PIN_5 -to showNum_output[4]
-set_location_assignment PIN_6 -to showNum_output[3]
-set_location_assignment PIN_8 -to showNum_output[2]
-set_location_assignment PIN_9 -to showNum_output[1]
-set_location_assignment PIN_11 -to showNum_output[0]
+set_location_assignment PIN_8 -to showDigit_output[3]
+set_location_assignment PIN_6 -to showDigit_output[2]
+set_location_assignment PIN_5 -to showDigit_output[1]
+set_location_assignment PIN_4 -to showDigit_output[0]
+set_location_assignment PIN_41 -to showNum_output[5]
+set_location_assignment PIN_14 -to showNum_output[4]
+set_location_assignment PIN_16 -to showNum_output[3]
+set_location_assignment PIN_12 -to showNum_output[2]
+set_location_assignment PIN_11 -to showNum_output[1]
+set_location_assignment PIN_9 -to showNum_output[0]
 set_global_assignment -name VECTOR_WAVEFORM_FILE tt.vwf
+set_global_assignment -name MISC_FILE "C:/Vue/Verilog_CommonAnodeFour-DigitSeven2/tt.dpf"

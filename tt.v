@@ -12,14 +12,14 @@ always@(posedge clk)frequency=frequency+1;
 
 always @(posedge frequency[21])  begin
 
-if(showDigit_output==5)showDigit_output = 0;
-
+if(showDigit_output>9)showDigit_output = 0;
+showDigit_output = showDigit_output + 1;
 
 showNum_output = showNum_output+1;
 if(showNum_output>9) showNum_output = 0;
 
 
-showDigit_output = showDigit_output + 1;
+
 
 
 end
